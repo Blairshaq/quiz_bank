@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Timed Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav>
+            <ul>
+                <li class="highScores"><a href="#" onClick="viewHighScores()">View High Scores</a></li>
+                <li class ="timer" id="quizTimer">Time: 0</li>
+            </ul>
+        </nav>
+      </header>
+      <div class="card" id="startQuizDiv">
+        <div class="card-header">
+          <h2>Coding Quiz Challenge</h2>
+        </div>
+        <div class="card-body">
+          <p>Try to answer the following code-related questions within the time limit.</p>
+          <p>Keep in mind that incorrect answers will penalize your score/time</p>
+          <p>by ten seconds</p>
+
+        </div>
+        <div class="card-footer">
+          <button id="startQzBtn" class="btn">Start Quiz</button>
+        </div>
+      </div>
+
+      <div class="card" id="questionDiv">
+        <div class="card-header">
+          <h2 id="question">Question 1</h2>
+        </div>
+        <div class="card-body">
+          <p><button id="btn1" class="answerbtn" onclick="checkAnswer(this)">Start Quiz</button></p>
+          <p><button id="btn2" class="answerbtn" onclick="checkAnswer(this)">Start Quiz</button></p>
+          <p><button id="btn3" class="answerbtn" onclick="checkAnswer(this)">Start Quiz</button></p>
+          <p><button id="btn4" class="answerbtn" onclick="checkAnswer(this)">Start Quiz</button></p>
+          
+
+        </div>
+        <div class="card-footer">
+          <p id="answerGiven"></p>
+        </div>
+      </div>
+
+      <div class="card" id="initialsDiv">
+        <div class="card-header">
+          <h2 id="allDone">All Done</h2>
+        </div>
+        <div class="card-body">
+          <p id="finalScore">Your Score is: </p>
+          <p>
+            <label>Enter Initials</label>
+            <input type="text" id="initials">
+            <button id="submit" class="answerbtn" onclick="getInitials()">Submit</button>
+          </p>
+          
+
+        </div>
+        <div class="card-footer">
+          <p id="answerOnInitialDiv"></p>
+        </div>
+      </div>
+
+      <div class="card" id="highScoresDiv">
+        <div class="card-header">
+          <h2 id="highscore">High Score</h2>
+        </div>
+        <div class="card-body">
+          
+          <p id="usersHighScores"></p>
+          
+
+        </div>
+        <div class="card-footer">
+            <button id="goback" class="answerbtn" onclick="resetQuiz()">Go Back</button>
+            <button id="clearHighScores" class="answerbtn" onclick="clearHighScores()">Clear High Scores</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
